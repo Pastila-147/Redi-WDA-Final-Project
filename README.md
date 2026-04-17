@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -71,3 +72,14 @@ export default defineConfig([
   },
 ])
 ```
+=======
+# Redi-WDA-Final-Project
+
+DogBnB is a web application for finding dog boarding services or becoming a host.
+
+## Features
+- Find a sitter
+- Become a host
+- Reviews
+- About page
+>>>>>>> origin/main
