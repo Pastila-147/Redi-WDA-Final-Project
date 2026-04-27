@@ -11,7 +11,7 @@ import Layout from "./layout.tsx";
 export const router = createBrowserRouter([
     {
         path: '/',
-        // Layout = Header + Outlet (Outlet is a place for children)
+        // Layout = Header + Outlet (Outlet is a place for children) + Footer
         element: <Layout />,
         errorElement: <Errorpage />,
         //Main doesn't refer to the homepage itself, but to a page within the Layout

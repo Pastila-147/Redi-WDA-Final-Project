@@ -1,5 +1,5 @@
 import './Header.css';
-import logo from '../assets/Logo.png';
+import logo from '../assets/Logo_paw.png';
 import { NavLink } from 'react-router-dom';
 
 export default function Header() {
@@ -12,11 +12,11 @@ export default function Header() {
                 </div>
 
                 <nav className="header__nav">
-                    <NavLink to="/">Main</NavLink>
-                    <NavLink to="/about">About</NavLink>
-                    <NavLink to="/host">BecomeHost</NavLink>
-                    <NavLink to="/dog">FindSitter</NavLink>
-                    <NavLink to="/reviews">Reviews</NavLink>
+                    <NavLink to="/" className="header__nav-item">Main</NavLink>
+                    <NavLink to="/about" className="header__nav-item">About</NavLink>
+                    <NavLink to="/host" className="header__nav-item">BecomeHost</NavLink>
+                    <NavLink to="/dog" className="header__nav-item">FindSitter</NavLink>
+                    <NavLink to="/reviews" className="header__nav-item">Reviews</NavLink>
                 </nav>
 
                 <div className="header__actions">
