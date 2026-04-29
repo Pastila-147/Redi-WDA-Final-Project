@@ -1,0 +1,60 @@
+.feedback-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.feedback-title {
+    color: white;
+    background-color: #7E57C2;
+}
+
+/*adatpive*/
+@media (max-width: 900px) {
+    .feedback-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .feedback-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/*cards*/
+.review-item {
+    background: lavender;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.review-img {
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.review-item-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.review-item-text {
+    font-size: 14px;
+    color: #555;
+}
+
+/*height restriction*/
+.review-item-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
