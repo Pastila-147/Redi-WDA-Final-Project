@@ -1,0 +1,13 @@
+
+
+
+.dog-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.dog-card img {
+    width: 100%;
+    border-radius: 10px;
+}
