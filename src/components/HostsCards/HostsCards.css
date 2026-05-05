@@ -1,0 +1,13 @@
+
+
+
+.host-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.host-card img {
+    width: 40%;
+    border-radius: 10px;
+}

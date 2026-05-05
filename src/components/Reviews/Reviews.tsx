@@ -8,19 +8,19 @@ const reviews = [
     {
         id: 1,
         name: "Joy & Anastasia",
-        text: "Everything went perfectly. I got regular updates and photos, which made me feel so calm.",
+        text: "Everything went perfectly. I got regular updates and photos(!), which made me feel so calm",
         image: photo2
     },
     {
         id: 2,
         name: "Kubuk & Sergey",
-        text: "Super friendly host and great communication. Kubik had so much fun and came back happy and relaxed.",
+        text: "Super friendly host and great communication. Kubik had so much fun and came back happy and relaxed",
         image: photo3
     },
     {
         id: 3,
         name: "Stefan & Natalia",
-        text: "Highly recommend! Rocky was well taken care of and even didn’t want to leave at the end.",
+        text: "Highly recommend! Stefan was well taken care of and even didn’t want to leave at the end",
         image: photo1
     }
 ];

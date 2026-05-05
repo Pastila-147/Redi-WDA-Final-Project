@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import Hosts from '../components/HostsCards/HostsCards'
 
 export default function About() {
     return (
@@ -9,6 +10,8 @@ export default function About() {
             <nav style={{ display: 'flex', gap: '10px' }}>
                 <NavLink to="/">Main</NavLink>
             </nav>
+
+            <Hosts />
         </div>
     )
 
