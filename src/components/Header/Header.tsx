@@ -1,5 +1,5 @@
 import './Header.css';
-import logo from '../../assets/Logo_paw.png';
+import logo from '../../assets/Logo_horizont.png';
 import { NavLink } from 'react-router-dom';
 
 export default function Header() {
@@ -8,7 +8,9 @@ export default function Header() {
             <div className="header__container">
 
                 <div className="header__logo">
-                    <img src={logo} alt="DogBnB logo"/>
+                    <NavLink to="/">
+                        <img src={logo} alt="DogBnB logo" />
+                    </NavLink>
                 </div>
 
                 <nav className="header__nav">
