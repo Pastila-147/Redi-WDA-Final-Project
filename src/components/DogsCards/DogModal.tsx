@@ -12,7 +12,7 @@ function DogModal({ dog, onClose }) {
                     <p className="dog-modal__dates">{dog.availability.start} — {dog.availability.end}</p>
 
                     <p className="dog-modal__description">{dog.description}</p>
-                    <p>Energy: {dog.qualities.energyLevel}</p>
+                    <p>Energy: {dog.personality.energyLevel}</p>
                     <p>Walks: {dog.care.walksPerDay}</p>
 
                 </div>

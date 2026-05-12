@@ -12,7 +12,7 @@ export const dogsData = [
             end: "2026-05-17"
         },
 
-        qualities: {
+        personality: {
             energyLevel: "high",
             goodWithDogs: true,
             goodWithKids: true,
@@ -37,7 +37,7 @@ export const dogsData = [
             end: "2026-06-17"
         },
 
-        qualities: {
+        personality: {
             energyLevel: "high",
             goodWithDogs: true,
             goodWithKids: true,
@@ -62,7 +62,7 @@ export const dogsData = [
             end: "2026-06-10"
         },
 
-        qualities: {
+        personality: {
             energyLevel: "low",
             goodWithDogs: true,
             goodWithKids: true,
@@ -87,7 +87,7 @@ export const dogsData = [
             end: "2026-06-14"
         },
 
-        qualities: {
+        personality: {
             energyLevel: "high",
             goodWithDogs: true,
             goodWithKids: false,
@@ -112,7 +112,7 @@ export const dogsData = [
             end: "2026-06-12"
         },
 
-        qualities: {
+        personality: {
             energyLevel: "high",
             goodWithDogs: true,
             goodWithKids: true,
@@ -137,7 +137,7 @@ export const dogsData = [
             end: "2026-06-09"
         },
 
-        qualities: {
+        personality: {
             energyLevel: "high",
             goodWithDogs: false,
             goodWithKids: true,
@@ -162,7 +162,7 @@ export const dogsData = [
             end: "2026-06-19"
         },
 
-        qualities: {
+        personality: {
             energyLevel: "low",
             goodWithDogs: true,
             goodWithKids: true,
@@ -187,7 +187,7 @@ export const dogsData = [
             end: "2026-06-22"
         },
 
-        qualities: {
+        personality: {
             energyLevel: "high",
             goodWithDogs: true,
             goodWithKids: true,
@@ -212,7 +212,7 @@ export const dogsData = [
             end: "2026-06-30"
         },
 
-        qualities: {
+        personality: {
             energyLevel: "high",
             goodWithDogs: false,
             goodWithKids: false,
@@ -237,7 +237,7 @@ export const dogsData = [
             end: "2026-07-01"
         },
 
-        qualities: {
+        personality: {
             energyLevel: "high",
             goodWithDogs: true,
             goodWithKids: true,
@@ -262,7 +262,7 @@ export const dogsData = [
             end: "2026-07-03"
         },
 
-        qualities: {
+        personality: {
             energyLevel: "high",
             goodWithDogs: false,
             goodWithKids: true,
@@ -287,7 +287,7 @@ export const dogsData = [
             end: "2026-06-23"
         },
 
-        qualities: {
+        personality: {
             energyLevel: "high",
             goodWithDogs: false,
             goodWithKids: true,

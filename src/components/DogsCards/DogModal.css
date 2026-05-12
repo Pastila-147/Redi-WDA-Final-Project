@@ -3,14 +3,14 @@
     padding: 10px 16px;
     border: none;
     border-radius: 8px;
-    background-color: #ff7a00;
+    background-color: #5a4fcf;
     color: #ffffff;
     font-size: 14px;
     cursor: pointer;
 }
 
 .dog-card__button:hover {
-    background-color: #e86f00;
+    background-color: #5a4fcf;
 }
 
 .dog-modal {
@@ -64,7 +64,7 @@
 
 .dog-modal__title {
     margin-bottom: 16px;
-    color: #ff7a00;
+    color: #5a4fcf;
     font-weight: 600;
 }
 

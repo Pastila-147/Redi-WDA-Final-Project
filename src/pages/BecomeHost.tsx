@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import Dogs from '../components/DogsCards/DogsCards'
+import DogSearchForm from '../components/Forms/DogSearchForm';
 
 export default function About() {
     return (
@@ -11,6 +12,7 @@ export default function About() {
                 <NavLink to="/">Main</NavLink>
             </nav>
 
+            <DogSearchForm />
             <Dogs />
         </div>
     )

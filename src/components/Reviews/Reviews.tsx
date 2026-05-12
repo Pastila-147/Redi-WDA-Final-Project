@@ -13,7 +13,7 @@ const reviews = [
     },
     {
         id: 2,
-        name: "Kubuk & Sergey",
+        name: "Kubik & Sergey",
         text: "Super friendly host and great communication. Kubik had so much fun and came back happy and relaxed",
         image: photo3
     },
