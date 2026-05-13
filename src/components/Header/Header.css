@@ -1,7 +1,8 @@
 .header {
     width: 100%;
-    border-bottom: 1px solid #7E57C2;
+    border-bottom: 1px solid #5a4fcf;
     background: white;
+    font-size: 22px;
 }
 
 .header__container {
@@ -28,12 +29,10 @@
 .header__nav-item {
     text-decoration: none;
     color: #333;
-    font-size: 16px;
-
 }
 
 .header__nav-item.active {
-    color: #7E57C2;
+    color: #5a4fcf;
     font-weight: 700;
 }
 
@@ -43,10 +42,12 @@
 }
 
 .btn-callback {
-    background: #7E57C2;
+    background: #5a4fcf;
     color: white;
     border: none;
     padding: 8px 16px;
     border-radius: 8px;
     cursor: pointer;
+    font-size: 22px;
+
 }

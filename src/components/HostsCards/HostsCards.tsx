@@ -25,7 +25,20 @@ function Hosts() {
                     <div key={host.id} className="host-card">
                         <img src={host.avatar} alt={host.name} />
                         <p>{host.name}</p>
+                        <p>{host.postcode}</p>
+                        <p>{host.age}</p>
+                        <p>{host.registered}</p>
+
+                        <button
+                            className="dog-card__button"
+                            type="button"
+                            // onClick={() => setSelectedHost(host)}
+                        >
+                            Contact the host
+                        </button>
                     </div>
+
+
                 )
             })}
         </div>

@@ -1,8 +1,9 @@
 import './Footer.css';
-import phone from '../../assets/phone.png';
-import email from '../../assets/email.png';
-import whatsapp from '../../assets/chat-bubble.png';
-import location from '../../assets/gps.png';
+import phone from '../../assets/phone.svg';
+import email from '../../assets/email.svg';
+import whatsapp from '../../assets/chat-bubble.svg';
+import location from '../../assets/gps.svg';
+import download from '../../assets/download.svg';
 import instagram from '../../assets/Instagram.png';
 import linkedin from '../../assets/linkedIn.png';
 import logo_1 from '../../assets/jetbrains.svg';
@@ -82,6 +83,14 @@ export default function Footer() {
                                 <img className="footer__socials__icon" src={linkedin} alt="linkedin" />
                             </a>
                         </li>
+
+                        <div className="footer__download">
+                            <img className="footer__download__icon" src={download} alt="download"/>
+                            <a className="footer__download__link"
+                               href="https://t.me/addstickers/Dunchick_by_fStikBot">
+                                 Download Sticker Pack
+                            </a>
+                        </div>
                     </div>
                 </div>
 

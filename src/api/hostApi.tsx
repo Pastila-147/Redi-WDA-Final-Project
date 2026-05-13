@@ -13,6 +13,9 @@ export async function getHosts() {
         name: `${host.name.first} ${host.name.last}`,
         city: 'Munich',
         avatar: host.picture.large,
+        postcode: host.postcode,
+        age: host.dob.age,
+        registered: host.registered.date,
     }));
 }
 

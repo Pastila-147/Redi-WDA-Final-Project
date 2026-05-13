@@ -1,55 +1,101 @@
 .how-it-works {
     padding: 60px 0;
+    background-color: white;
 }
 
 .how-it-works__container {
-    max-width: 1200px;
+    max-width: 1240px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 70px;
 }
 
 .how-it-works__title {
-    margin: 0 0 40px;
-    font-size: 32px;
+    margin: 0 0 45px;
+    text-align: center;
+    font-size: 42px;
+    line-height: 1.2;
     font-weight: 700;
-    color: #7E57C2;
+    color: #5b57d9;
 }
 
 .how-it-works__list {
     margin: 0;
     padding: 0;
     list-style: none;
-
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px 40px;
+    column-gap: 120px;
+    row-gap: 36px;
 }
 
 .how-it-works__item {
-    margin-bottom: 24px;
+    /*padding-top: 15px;*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
 }
 
 .how-it-works__item-title {
-    margin: 0 0 8px;
-    font-size: 20px;
+    margin: 0 0 10px;
+    font-size: 26px;
+    line-height: 1.2;
     font-weight: 700;
+    color: #11112b;
 }
 
 .how-it-works__item-text {
     margin: 0;
-    font-size: 16px;
-    color: #555;
+    font-size: 22px;
+    line-height: 1.3;
+    font-weight: 400;
+    color: #6f6b86;
+}
+
+.how-it-works__final {
+    margin: 56px auto 0;
+    padding-top: 30px;
+    max-width: 860px;
+    border-top: 1px solid #e5e1f2;
+
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    color: #6f6b86;
 }
 
 .how-it-works__note {
-    margin-top: 32px;
+    margin-top: 24px;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 6px;
+
+    font-size: 22px;
+    line-height: 1.3;
+    color: #6f6b86;
 }
 
 .how-it-works__note-title {
-    margin: 0 0 8px;
+    margin: 0;
+    font-weight: 700;
+    color: #11112b;
 }
 
 .how-it-works__note-text {
     margin: 0;
+}
+
+.how-it-works__number {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lavender;
+    font-size: 24px;
+    font-weight: 700;
+    color: #5b57d9;
 }

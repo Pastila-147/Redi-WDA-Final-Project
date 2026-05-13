@@ -1,0 +1,29 @@
+.callback-form {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: white;
+    border: 1px solid #ccc;
+}
+
+.callback-form input {
+    padding: 10px;
+}
+
+.callback-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #5a4fcf;
+    color: white;
+    cursor: pointer;
+}
+
+.callback-form p {
+    margin: 0;
+    font-size: 14px;
+}
