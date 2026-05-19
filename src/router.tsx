@@ -2,7 +2,7 @@ import { createBrowserRouter} from "react-router-dom";
 
 import Home from './pages/Home.tsx'
 import About from './pages/About'
-import BecomeHost from './pages/BecomeHost'
+import FindDog from './pages/FindDog.tsx'
 import FindSitter from './pages/FindSitter'
 import Reviews from './pages/Reviews'
 import Errorpage from './pages/Errorpage'
@@ -26,7 +26,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'host',
-                element: <BecomeHost />,
+                element: <FindDog />,
             },
             {
                 path: 'dog',

@@ -1,7 +1,8 @@
 import { useQuery } from '@tanstack/react-query'
 import { useState } from 'react';
 import { getDogs } from '../../api/dogApi'
-import { dogsData } from './dogsData';
+// import { dogsData } from './dogsData';
+import { useDogsStore } from "../../stores/dogsStore";
 import DogModal from './DogModal';
 import './DogCards.css';
 import { useDogFiltersStore } from '../../stores/useDogFiltersStore';
@@ -10,6 +11,7 @@ import { useDogFiltersStore } from '../../stores/useDogFiltersStore';
 //react-component
 function Dogs() {
     const [selectedDog, setSelectedDog] = useState(null);
+    const dogsFromStore = useDogsStore((state) => state.dogs);
     const filters = useDogFiltersStore((state) => state.filters);
     const query = useQuery({
         queryKey: ['dogs'],
@@ -26,7 +28,7 @@ function Dogs() {
     const dogs = query.data
         ?.map((dogUrl, index) => {
             const breed = extractBreed(dogUrl);
-            const dogInfo = dogsData[index];
+            const dogInfo = dogsFromStore[index];
 
             if (!dogInfo) return null;
 

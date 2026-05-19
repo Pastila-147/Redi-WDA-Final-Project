@@ -42,17 +42,6 @@
     color: #000;
 }
 
-/*.dog-card__description {*/
-/*    font-size: 14px;*/
-/*    color: #666;*/
-/*    line-height: 1.4;*/
-
-/*    display: -webkit-box;*/
-/*    -webkit-line-clamp: 3;*/
-/*    -webkit-box-orient: vertical;*/
-/*    overflow: hidden;*/
-/*}*/
-
 .dog-card__dates {
     font-size: 12px;
     color: #5a4fcf;
