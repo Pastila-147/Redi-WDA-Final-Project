@@ -25,11 +25,11 @@ export const router = createBrowserRouter([
                 element: <About />,
             },
             {
-                path: 'host',
+                path: 'dog',
                 element: <FindDog />,
             },
             {
-                path: 'dog',
+                path: 'host',
                 element: <FindSitter />,
             },
             {

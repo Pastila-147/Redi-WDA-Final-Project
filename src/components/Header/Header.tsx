@@ -19,8 +19,8 @@ export default function Header() {
                 <nav className="header__nav">
                     <NavLink to="/" className="header__nav-item">Main</NavLink>
                     <NavLink to="/about" className="header__nav-item">About</NavLink>
-                    <NavLink to="/host" className="header__nav-item">Find dog</NavLink>
-                    <NavLink to="/dog" className="header__nav-item">Find Host</NavLink>
+                    <NavLink to="/dog" className="header__nav-item">Find dog</NavLink>
+                    <NavLink to="/host" className="header__nav-item">Find Host</NavLink>
                     <NavLink to="/reviews" className="header__nav-item">Reviews</NavLink>
                 </nav>
 

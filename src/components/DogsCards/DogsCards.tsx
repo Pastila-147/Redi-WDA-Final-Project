@@ -1,7 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import { useState } from 'react';
 import { getDogs } from '../../api/dogApi'
-// import { dogsData } from './dogsData';
 import { useDogsStore } from "../../stores/dogsStore";
 import DogModal from './DogModal';
 import './DogCards.css';
