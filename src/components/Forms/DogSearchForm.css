@@ -1,51 +1,99 @@
 .dog-filters {
+    padding: 24px 36px;
+
+    background-color: #f2eeff;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.dog-filters__field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.dog-filters__label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #746ec2;
+}
+
+.dog-filters__select,
+.dog-filters__input {
+    width: 100%;
+    height: 56px;
+    padding: 0 20px;
+
+    border: 1px solid #d7d1ea;
+    border-radius: 10px;
+
+    background-color: #ffffff;
+    color: #111111;
+
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.dog-filters__checkboxes {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
-    align-items: center;
-    padding: 20px;
-    margin-bottom: 32px;
-    background-color: lavender;
-    border-radius: 16px;
+    gap: 14px;
 }
 
-.dog-filters label {
+.dog-filters__checkbox-button {
+    min-height: 44px;
+    padding: 0 20px;
+
     display: flex;
     align-items: center;
-    gap: 8px;
 
-    font-size: 14px;
+    border: 2px solid #c6bfff;
+    border-radius: 999px;
+
+    background-color: #ffffff;
+    color: #5b57d9;
+
+    font-size: 16px;
     font-weight: 500;
-    color: black;
-}
 
-.dog-filters select {
-    padding: 8px 12px;
-    border: 1px solid black;
-    border-radius: 8px;
-    font-size: 14px;
-    background-color: white;
-    cursor: pointer;
-}
-
-.dog-filters input[type="checkbox"] {
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
-}
-
-.dog-filters button {
-    padding: 10px 16px;
-    border: none;
-    border-radius: 8px;
-    background-color: #5a4fcf;
-    color: white;
-    font-size: 14px;
-    font-weight: 600;
     cursor: pointer;
     transition: 0.2s ease;
 }
 
-.dog-filters button:hover {
-    background-color: violet;
+.dog-filters__checkbox-button:hover {
+    border-color: #5b57d9;
+}
+
+.dog-filters__checkbox-button input {
+    display: none;
+}
+
+.dog-filters__checkbox-button:has(input:checked) {
+    background-color: #5b57d9;
+    color: #ffffff;
+}
+
+.dog-filters__reset {
+    align-self: flex-end;
+
+    min-height: 54px;
+    padding: 0 24px;
+
+    border: 1px solid #b9b4c9;
+    border-radius: 14px;
+
+    background-color: #ffffff;
+    color: #111111;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.dog-filters__reset:hover {
+    background-color: #f7f5ff;
 }

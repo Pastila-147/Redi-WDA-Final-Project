@@ -21,7 +21,7 @@ export default function Hero() {
                     </p>
 
                     <div className="hero__actions">
-                        <NavLink to="/dog" className="btn-hero">
+                        <NavLink to="/dog#add-dog-form" className="btn-hero">
                             List your dog
                         </NavLink>
 
