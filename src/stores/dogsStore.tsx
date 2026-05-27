@@ -12,4 +12,13 @@ export const useDogsStore = create((set) => ({
 
             return { dogs: updatedDogs };
         }),
+
+    chooseDog: (dogId) =>
+        set((state) => ({
+            dogs: state.dogs.map((dog) =>
+                dog.id === dogId
+                    ? { ...dog, isChosen: true }
+                    : dog
+            ),
+        })),
 }));

@@ -8,6 +8,7 @@ function DogSearchForm() {
 
     return (
         <div className="dog-filters">
+
             <label className="dog-filters__field">
                 <span className="dog-filters__label">Energy</span>
 
@@ -24,6 +25,32 @@ function DogSearchForm() {
                     <option value="high">High</option>
                 </select>
             </label>
+
+            <label className="dog-filters__field">
+                <span className="dog-filters__label">Walks/day</span>
+
+                <select
+                    className="dog-filters__select"
+                    value={filters.walksPerDay}
+                    onChange={(event) =>
+                        setFilter('walksPerDay', event.target.value)
+                    }
+                >
+                    <option value="all">All</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4 or more</option>
+                </select>
+            </label>
+
+            <button
+                className="dog-filters__reset"
+                type="button"
+                onClick={resetFilters}
+            >
+                Reset
+            </button>
+
 
             <div className="dog-filters__checkboxes">
                 <label className="dog-filters__checkbox-button">
@@ -61,58 +88,38 @@ function DogSearchForm() {
             </div>
 
 
-            <label className="dog-filters__field">
-                <span className="dog-filters__label">Walks/day</span>
+            <div className="dog-filters__dates">
 
-                <select
-                    className="dog-filters__select"
-                    value={filters.walksPerDay}
-                    onChange={(event) =>
-                        setFilter('walksPerDay', event.target.value)
-                    }
-                >
-                    <option value="all">All</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4 or more">4</option>
-                </select>
-            </label>
+                <label className="dog-filters__field dog-filters__field--date">
+                    <span className="dog-filters__label">From</span>
 
-            <label className="dog-filters__field">
-                <span className="dog-filters__label">From</span>
+                    <input
+                        className="dog-filters__input"
+                        type="date"
+                        value={filters.startDate}
+                        onChange={(event) =>
+                            setFilter('startDate', event.target.value)
+                        }
+                    />
+                </label>
 
-                <input
-                    className="dog-filters__input"
-                    type="date"
-                    value={filters.startDate}
-                    onChange={(event) =>
-                        setFilter('startDate', event.target.value)
-                    }
-                />
-            </label>
+                <label className="dog-filters__field dog-filters__field--date">
+                    <span className="dog-filters__label">To</span>
 
-            <label className="dog-filters__field">
-                <span className="dog-filters__label">To</span>
+                    <input
+                        className="dog-filters__input"
+                        type="date"
+                        value={filters.endDate}
+                        onChange={(event) =>
+                            setFilter('endDate', event.target.value)
+                        }
+                    />
+                </label>
 
-                <input
-                    className="dog-filters__input"
-                    type="date"
-                    value={filters.endDate}
-                    onChange={(event) =>
-                        setFilter('endDate', event.target.value)
-                    }
-                />
-            </label>
+            </div>
 
-            <button
-                className="dog-filters__reset"
-                type="button"
-                onClick={resetFilters}
-            >
-                Reset filters
-            </button>
-    </div>
-);
+        </div>
+    );
 }
 
 export default DogSearchForm;

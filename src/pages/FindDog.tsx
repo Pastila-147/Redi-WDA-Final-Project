@@ -5,6 +5,7 @@ import Dogs from '../components/DogsCards/DogsCards';
 import DogSearchForm from '../components/Forms/DogSearchForm';
 import AddDogForm from '../components/Forms/AddDogForm';
 import { useAddDogStore } from '../stores/addDogStore';
+import './FindDog.css';
 
 
 export default function FindDog() {
@@ -12,8 +13,7 @@ export default function FindDog() {
     const location = useLocation();
     const {
         isOpen,
-        openForm,
-        closeForm
+        openForm
     } = useAddDogStore();
 
 
@@ -52,14 +52,6 @@ export default function FindDog() {
             <div id="add-dog-form">
                 {isOpen && (
                     <div className="add-dog-form-wrapper">
-                        <button
-                            className="add-dog-form__close"
-                            type="button"
-                            onClick={closeForm}
-                        >
-                            ✕
-                        </button>
-
                         <AddDogForm />
                     </div>
                 )}

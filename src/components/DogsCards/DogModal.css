@@ -1,85 +1,197 @@
-.dog-card__button {
-    margin-top: 12px;
-    padding: 10px 16px;
-    border: none;
-    border-radius: 8px;
-    background-color: #5a4fcf;
-    color: #ffffff;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-.dog-card__button:hover {
-    background-color: #5a4fcf;
-}
-
 .dog-modal {
     position: fixed;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     z-index: 1000;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .dog-modal__content {
     position: relative;
-    width: 800px;
-    background-color: #ffffff;
-    border-radius: 20px;
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    width: 950px;
     max-width: 90vw;
+    height: 560px;
     max-height: 90vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
 .dog-modal__close {
     position: absolute;
-    top: 12px;
-    right: 16px;
+    top: 18px;
+    right: 22px;
+    z-index: 3;
+    width: 36px;
+    height: 36px;
+    padding: 0;
     border: none;
-    background: transparent;
-    font-size: 32px;
-    cursor: pointer;
+    background-color: transparent;
+    font-size: 34px;
+    line-height: 1;
     color: #333333;
+    cursor: pointer;
+}
+
+.dog-modal__main {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    height: 560px;
+    min-height: 0;
+}
+
+.dog-modal__image-box {
+    width: 500px;
+    height: 560px;
+    background-color: #d5cdf2;
 }
 
 .dog-modal__img {
     width: 100%;
     height: 100%;
+    display: block;
     object-fit: cover;
 }
 
 .dog-modal__info {
-    padding: 32px;
+    min-width: 0;
+    padding: 34px 48px 28px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+}
+
+.dog-modal__breed {
+    margin: 0 0 8px;
+    font-size: 18px;
+    color: #333333;
 }
 
 .dog-modal__name {
-    margin-bottom: 8px;
-    font-size: 28px;
+    margin: 0 0 8px;
+    font-size: 32px;
+    line-height: 1.1;
+    font-weight: 700;
+    color: #1f1f1f;
 }
 
 .dog-modal__title {
-    margin-bottom: 16px;
-    color: #5a4fcf;
+    margin: 0 0 18px;
+    font-size: 22px;
+    line-height: 1.25;
+    font-weight: 600;
+    color: #5b57d9;
+}
+
+.dog-modal__tags {
+    margin-bottom: 24px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.dog-modal__tags span {
+    padding: 6px 16px;
+    border-radius: 20px;
+    background-color: #f0edfb;
+    color: #5b57d9;
+    font-size: 18px;
     font-weight: 600;
 }
 
+.dog-modal__dates {
+    margin: 0 0 24px;
+    font-size: 20px;
+    color: #333333;
+}
+
 .dog-modal__description {
-    margin-bottom: 20px;
-    line-height: 1.5;
-    color: #555555;
+    margin: 0 0 20px;
+    font-size: 18px;
+    line-height: 1.45;
+    color: #333333;
+}
+
+.dog-modal__footer {
+    height: 110px;
+    padding: 24px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #dddddd;
+    box-sizing: border-box;
+}
+
+.dog-modal__details {
+    display: flex;
+    gap: 30px;
+    font-size: 20px;
+    color: #333333;
+}
+
+.dog-modal__choose {
+    min-width: 230px;
+    height: 56px;
+    margin-top: auto;
+    border: none;
+    border-radius: 14px;
+    background-color: #5b57d9;
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.dog-modal__choose:hover {
+    background-color: #4b47c7;
 }
 
 @media (max-width: 700px) {
-    .dog-modal__content {
-        grid-template-columns: 1fr;
+    .dog-modal {
+        padding: 20px;
     }
 
-    .dog-modal__image {
+    .dog-modal__content {
+        width: 100%;
+        height: auto;
+        max-height: 90vh;
+    }
+
+    .dog-modal__main {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .dog-modal__image-box {
+        width: 100%;
         height: 260px;
+    }
+
+    .dog-modal__info {
+        padding: 32px 28px;
+    }
+
+    /*.dog-modal__footer {*/
+    /*    height: auto;*/
+    /*    flex-direction: column;*/
+    /*    align-items: stretch;*/
+    /*    gap: 20px;*/
+    /*}*/
+
+    /*.dog-modal__details {*/
+    /*    flex-direction: column;*/
+    /*    gap: 8px;*/
+    /*}*/
+
+    .dog-modal__choose {
+        width: 100%;
     }
 }

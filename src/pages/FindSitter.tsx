@@ -2,26 +2,36 @@ import Hosts from '../components/HostsCards/HostsCards'
 import HostSearchForm from '../components/Forms/HostSearchForm';
 import AddHostForm from '../components/Forms/AddHostForm';
 import { useAddHostStore } from '../stores/addHostStore';
+import './FindSitter.css';
 
 export default function About() {
     const openForm = useAddHostStore((state) => state.openForm);
     const isOpen = useAddHostStore((state) => state.isOpen);
 
     return (
-        <div>
-            <h1> Our hosts in Munich </h1>
-            <h3>Browse hosts in Munich and ask temporary care</h3>
+        <section className="hosts-page" id="find-host">
 
-            <button type="button" onClick={openForm}>
-                Become a host
-            </button>
+            <div className="hosts-page__hero">
+                <h1 className="hosts-page__title">Our hosts in Munich</h1>
+                <p className="hosts-page__subtitle">Browse hosts in Munich and ask temporary care</p>
+                <button
+                    type="button" className="hosts-page__add-button" onClick={openForm}>+ Become a host
+                </button>
+            </div>
 
-            {isOpen && <AddHostForm />}
+
+            <div id="add-host-form">
+                {isOpen && (
+                    <div className="add-host-form-wrapper">
+                        <AddHostForm />
+                    </div>
+                )}
+            </div>
 
             <HostSearchForm />
 
             <Hosts />
-        </div>
+        </section>
     )
 
 }

@@ -36,6 +36,11 @@ function AddDogForm() {
 
     return (
         <form className="new-dog-form" onSubmit={handleSubmit}>
+
+            <button className="new-dog-form__close" type="button"
+                    onClick={closeForm}>×
+            </button>
+
             <input
                 name="name"
                 placeholder="Enter your dog name"
@@ -148,7 +153,7 @@ function AddDogForm() {
 
             <button type="submit"> Send </button>
 
-            <button type="button" onClick={closeForm}>x</button>
+            {/*<button type="button" onClick={closeForm}>x</button>*/}
 
         </form>
     );

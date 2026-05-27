@@ -12,6 +12,7 @@ function Dogs() {
     const [selectedDog, setSelectedDog] = useState(null);
     const dogsFromStore = useDogsStore((state) => state.dogs);
     const filters = useDogFiltersStore((state) => state.filters);
+    const chooseDog = useDogsStore((state) => state.chooseDog);
     const query = useQuery({
         queryKey: ['dogs'],
         queryFn: getDogs,
@@ -31,6 +32,7 @@ function Dogs() {
 
             if (!dogInfo) return null;
 
+
             return {
                 ...dogInfo,
                 image: dogUrl,
@@ -41,6 +43,9 @@ function Dogs() {
         .filter(Boolean);
 
     const filteredDogs = dogs.filter((dog) => {
+
+        if (dog.isChosen) {return false;}
+
         if (filters.energyLevel !== "all" && dog.personality.energyLevel !== filters.energyLevel) {
             return false;}
 
@@ -67,36 +72,57 @@ function Dogs() {
 
     return (
         <>
-            <div className="dog-list">
-                {filteredDogs.map((dog) => (
-                    <div key={dog.id} className="dog-card">
-                        <img
-                            src={dog.image} alt={dog.breed}  className="dog-card__img"
-                        />
-                            <div className="dog-card__content">
-                                <h3 className="dog-card__name">{dog.name} ({dog.breed})</h3>
-                                <p className="dog-card__title">{dog.title}</p>
-                                <p className="dog-card__dates">{dog.availability.start} — {dog.availability.end}</p>
+            <div className="dog-list-wrapper">
+                <p className="dog-list__counter">
+                    {filteredDogs.length} dogs available
+                </p>
+
+                <div className="dog-list">
+                    {filteredDogs.map((dog) => (
+                        <div key={dog.id} className="dog-card">
+                            <div className="dog-card__image-wrapper">
+                                <img
+                                    src={dog.image}
+                                    alt={dog.breed}
+                                    className="dog-card__img"
+                                />
+
+                                <span className="dog-card__breed">
+                                {dog.breed}
+                            </span>
                             </div>
-                            <button
-                                className="dog-card__button"
-                                type="button"
-                                onClick={() => setSelectedDog(dog)}
-                            >
-                                Show more
-                            </button>
-                    </div>
-                ))}
+
+                            <div className="dog-card__content">
+                                <h3 className="dog-card__name">{dog.name}</h3>
+
+                                <p className="dog-card__title">{dog.title}</p>
+
+                                <p className="dog-card__dates">
+                                    {dog.availability.start} — {dog.availability.end}
+                                </p>
+
+                                <button
+                                    className="dog-card__button"
+                                    type="button"
+                                    onClick={() => setSelectedDog(dog)}
+                                >
+                                    Show more
+                                </button>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
 
             {selectedDog && (
                 <DogModal
                     dog={selectedDog}
                     onClose={() => setSelectedDog(null)}
+                    onChoose={chooseDog}
                 />
             )}
         </>
-    )
+    );
 }
 
 export default Dogs

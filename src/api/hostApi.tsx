@@ -1,6 +1,6 @@
 //get Hosts from public API https://randomuser.me/
 export async function getHosts() {
-    const response = await fetch('https://randomuser.me/api/?results=11&nat=de')
+    const response = await fetch('https://randomuser.me/api/?results=50&nat=de')
 
     if (!response.ok) {
         throw new Error('Error: No hosts today');
