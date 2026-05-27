@@ -12,7 +12,7 @@ export default function Header() {
 
                 <div className="header__logo">
                     <NavLink to="/">
-                        <img src={logo} alt="DogBnB logo" />
+                        <img className="header__logo-img" src={logo} alt="DogBnB logo" />
                     </NavLink>
                 </div>
 

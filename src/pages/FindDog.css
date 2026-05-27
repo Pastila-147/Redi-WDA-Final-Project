@@ -1,0 +1,51 @@
+.dogs-page {
+    padding-bottom: 10px;
+    background-color: #fff;
+}
+
+.dogs-page__hero {
+    padding: 48px 20px;
+    text-align: center;
+}
+
+.dogs-page__title {
+    margin: 0 0 12px;
+    font-size: 44px;
+    line-height: 1.15;
+    font-weight: 700;
+    color: #1f1b3d;
+}
+
+.dogs-page__subtitle {
+    margin: 0 0 32px;
+    font-size: 22px;
+    line-height: 1.3;
+    font-weight: 600;
+    color: #5a4fcf;
+}
+
+.dogs-page__add-button {
+    min-width: 210px;
+    height: 56px;
+    padding: 0 32px;
+    border: none;
+    border-radius: 14px;
+    background-color: #5a4fcf;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.dogs-page__add-button:hover {
+    background-color: #4b47c7;
+}
+
+#add-dog-form {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.add-dog-form-wrapper {
+    margin-bottom: 32px;
+}

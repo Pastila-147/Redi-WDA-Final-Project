@@ -1,0 +1,86 @@
+.new-host-form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 40px;
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+
+.new-host-form input,
+.new-host-form select,
+.new-host-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+
+    font-size: 16px;
+    font-family: inherit;
+
+    box-sizing: border-box;
+}
+
+.new-host-form input:focus,
+.new-host-form select:focus,
+.new-host-form textarea:focus {
+    outline: none;
+    border-color: #5a4fcf;
+}
+
+.new-host-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.new-host-form button {
+    padding: 12px 16px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.new-host-form button[type="submit"] {
+    background-color: #5a4fcf;
+    color: white;
+}
+
+.new-host-form button[type="submit"]:hover {
+    opacity: 0.9;
+}
+
+.new-host-form button[type="button"] {
+    background-color: #5a4fcf;
+}
+
+.new-host-form__close {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+
+    width: 36px;
+    height: 36px;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    line-height: 1;
+    color: white;
+    transition: 0.2s ease;
+}
+
+.new-host-form__close:hover {
+    background-color: #f3f3f3;
+    color: #000;
+}

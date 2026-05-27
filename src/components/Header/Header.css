@@ -51,3 +51,11 @@
     font-size: 22px;
 
 }
+
+
+.header__logo-img {
+    filter: brightness(0) saturate(100%)
+    invert(40%) sepia(77%)
+    saturate(1443%) hue-rotate(227deg)
+    brightness(90%) contrast(92%);
+}
