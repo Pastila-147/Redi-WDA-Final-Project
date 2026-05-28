@@ -26,7 +26,7 @@ export default function Hero() {
                         </NavLink>
 
                         {/*other button design*/}
-                        <NavLink to="/host" className="btn-hero btn-hero__secondary">
+                        <NavLink to="/host#add-host-form" className="btn-hero btn-hero__secondary">
                             Become a host
                         </NavLink>
                     </div>

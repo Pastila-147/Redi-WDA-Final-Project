@@ -91,3 +91,17 @@
     border-color: #5a4fcf;
     color: white;
 }
+
+.host-card__success {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+    background-color: #b9df8c;
+
+    color: #3f7d12;
+    font-size: 16px;
+    font-weight: 600;
+}

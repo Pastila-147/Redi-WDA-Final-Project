@@ -17,10 +17,10 @@ export default function Header() {
                 </div>
 
                 <nav className="header__nav">
-                    <NavLink to="/" className="header__nav-item">Main</NavLink>
+                    <NavLink to="/" className="header__nav-item">Home</NavLink>
                     <NavLink to="/about" className="header__nav-item">About</NavLink>
-                    <NavLink to="/dog" className="header__nav-item">Find dog</NavLink>
-                    <NavLink to="/host" className="header__nav-item">Find Host</NavLink>
+                    <NavLink to="/dog" className="header__nav-item">Find a dog</NavLink>
+                    <NavLink to="/host" className="header__nav-item">Find a host</NavLink>
                     <NavLink to="/reviews" className="header__nav-item">Reviews</NavLink>
                 </nav>
 

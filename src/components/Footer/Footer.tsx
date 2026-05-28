@@ -10,9 +10,6 @@ import logo_1 from '../../assets/jetbrains.svg';
 import logo_2 from '../../assets/autoscout.png';
 import logo_3 from '../../assets/redi.webp';
 
-
-import { NavLink } from 'react-router-dom';
-
 export default function Footer() {
     return (
         <footer className="footer">
@@ -48,14 +45,6 @@ export default function Footer() {
                             </a>
                         </li>
                     </ul>
-                </div>
-
-                <div className="about__container">
-                    <h6 className="footer__title">Info</h6>
-                    <div className="about__info">
-                        <NavLink to="/about" className="header__nav-item">About us</NavLink>
-                        <NavLink to="/reviews" className="header__nav-item">Reviews</NavLink>
-                    </div>
                 </div>
 
                 <div className="socials__container">
@@ -94,11 +83,6 @@ export default function Footer() {
                     </div>
                 </div>
 
-
-
-                {/*<div className="header__actions">*/}
-                {/*    <button className="btn-up">Go up</button>*/}
-                {/*</div>*/}
             </div>
         </footer>
     )

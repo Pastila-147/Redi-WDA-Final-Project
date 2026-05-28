@@ -96,6 +96,7 @@ function DogSearchForm() {
                     <input
                         className="dog-filters__input"
                         type="date"
+                        lang="en-US"
                         value={filters.startDate}
                         onChange={(event) =>
                             setFilter('startDate', event.target.value)
@@ -109,6 +110,7 @@ function DogSearchForm() {
                     <input
                         className="dog-filters__input"
                         type="date"
+                        lang="en-US"
                         value={filters.endDate}
                         onChange={(event) =>
                             setFilter('endDate', event.target.value)

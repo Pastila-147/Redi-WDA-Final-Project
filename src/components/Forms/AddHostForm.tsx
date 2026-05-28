@@ -78,7 +78,7 @@ function AddHostForm() {
                 name="experience"
                 type="number"
                 placeholder="Years of experience"
-                value={form.experienceca}
+                value={form.experience}
                 onChange={(e) => setField("experience", e.target.value)}
                 required
             />

@@ -4,7 +4,7 @@ export default function About() {
     return (
         <section className="about">
             <div className="about__hero">
-                <h1 className="about__title">About us</h1>
+                {/*<h1 className="about__title">About us</h1>*/}
                 <h3 className="about__subtitle">
                     A platform created to help dog owners find caring and trustworthy dog sitters
                     in a simple and friendly way

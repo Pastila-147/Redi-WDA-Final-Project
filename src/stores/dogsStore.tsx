@@ -4,6 +4,13 @@ import { dogsData } from "../components/DogsCards/dogsData";
 export const useDogsStore = create((set) => ({
     dogs: JSON.parse(localStorage.getItem("dogs")) || dogsData,
 
+    setDogs: (dogs) =>
+        set(() => {
+            localStorage.setItem("dogs", JSON.stringify(dogs));
+
+            return { dogs };
+        }),
+
     addDog: (dog) =>
         set((state) => {
             const updatedDogs = [...state.dogs, dog];
@@ -14,11 +21,15 @@ export const useDogsStore = create((set) => ({
         }),
 
     chooseDog: (dogId) =>
-        set((state) => ({
-            dogs: state.dogs.map((dog) =>
+        set((state) => {
+            const updatedDogs = state.dogs.map((dog) =>
                 dog.id === dogId
                     ? { ...dog, isChosen: true }
                     : dog
-            ),
-        })),
+            );
+
+            localStorage.setItem("dogs", JSON.stringify(updatedDogs));
+
+            return { dogs: updatedDogs };
+        }),
 }));

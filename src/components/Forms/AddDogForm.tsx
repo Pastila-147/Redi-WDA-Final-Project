@@ -99,6 +99,15 @@ function AddDogForm() {
                 <option value="high">High</option>
             </select>
 
+            <input
+                name="walksPerDay"
+                type="number"
+                placeholder="Walks per day"
+                value={form.care.walksPerDay}
+                onChange={(e) => setNestedField("care", "walksPerDay", e.target.value)}
+                required
+            />
+
             <label>
                 <input
                     type="checkbox"
@@ -132,23 +141,16 @@ function AddDogForm() {
                 Can stay alone
             </label>
 
-            <input
-                name="walksPerDay"
-                type="number"
-                placeholder="Walks per day"
-                value={form.care.walksPerDay}
-                onChange={(e) => setNestedField("care", "walksPerDay", e.target.value)}
-                required
-            />
+
+
             <label>
-                <input
-                    type="checkbox"
-                    checked={form.care.specialNeeds}
-                    onChange={(e) =>
-                        setNestedField("care", "specialNeeds", e.target.checked)
-                    }
-                />
-                Special needs
+            <input
+                type="checkbox"
+                checked={form.care.specialNeeds}
+                onChange={(e) =>
+                    setNestedField("care", "specialNeeds", e.target.checked)
+                }
+            /> Special needs
             </label>
 
             <button type="submit"> Send </button>

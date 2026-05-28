@@ -1,8 +1,10 @@
 import { useState } from 'react';
-import './DogModal.css';
+import { useNavigate } from 'react-router-dom';
+import './DogDetails.css';
 
-function DogModal({ dog, onClose, onChoose }) {
+function DogDetails({ dog,onChoose }) {
     const [isChosen, setIsChosen] = useState(false);
+    const navigate = useNavigate();
 
     const handleChooseDog = () => {
         onChoose(dog.id);
@@ -10,60 +12,60 @@ function DogModal({ dog, onClose, onChoose }) {
     };
 
     return (
-        <div className="dog-modal">
-            <div className="dog-modal__content">
+        <div className="dog-details">
+            <div className="dog-details__content">
 
                 <button
-                    className="dog-modal__close"
+                    className="dog-details__close"
                     type="button"
-                    onClick={onClose}
+                    onClick={() => navigate('/dog')}
                 >
                     ×
                 </button>
 
                 {isChosen ? (
-                    <div className="dog-modal__success">
-                        <h3 className="dog-modal__success-title">
+                    <div className="dog-details__success">
+                        <h3 className="dog-details__success-title">
                             Dog selected!
                         </h3>
 
-                        <p className="dog-modal__success-text">
+                        <p className="dog-details__success-text">
                             We will notify the owner and contact you soon.
                         </p>
 
                         <button
-                            className="dog-modal__choose"
+                            className="dog-details__choose"
                             type="button"
-                            onClick={onClose}
+                            onClick={() => navigate('/dog')}
                         >
                             Great
                         </button>
                     </div>
                 ) : (
-                    <div className="dog-modal__main">
+                    <div className="dog-details__main">
 
-                        <div className="dog-modal__image-box">
+                        <div className="dog-details__image-box">
                             <img
                                 src={dog.image}
                                 alt={dog.name}
-                                className="dog-modal__img"
+                                className="dog-details__img"
                             />
                         </div>
 
-                        <div className="dog-modal__info">
-                            <p className="dog-modal__breed">
+                        <div className="dog-detailsl__info">
+                            <p className="dog-details__breed">
                                 {dog.breed}
                             </p>
 
-                            <h3 className="dog-modal__name">
+                            <h3 className="dog-details__name">
                                 {dog.name}
                             </h3>
 
-                            <p className="dog-modal__title">
+                            <p className="dog-details__title">
                                 {dog.title}
                             </p>
 
-                            <div className="dog-modal__tags">
+                            <div className="dog-details__tags">
                                 <span>
                                     {dog.personality.energyLevel} energy
                                 </span>
@@ -73,16 +75,16 @@ function DogModal({ dog, onClose, onChoose }) {
                                 </span>
                             </div>
 
-                            <p className="dog-modal__dates">
+                            <p className="dog-details__dates">
                                 {dog.availability.start} — {dog.availability.end}
                             </p>
 
-                            <p className="dog-modal__description">
+                            <p className="dog-details__description">
                                 {dog.description}
                             </p>
 
                             <button
-                                className="dog-modal__choose"
+                                className="dog-details__choose"
                                 type="button"
                                 onClick={handleChooseDog}
                             >
@@ -97,4 +99,4 @@ function DogModal({ dog, onClose, onChoose }) {
     );
 }
 
-export default DogModal;
+export default DogDetails;

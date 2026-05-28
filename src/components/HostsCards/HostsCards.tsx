@@ -8,7 +8,6 @@ import './HostsCards.css';
 //react-component
 function Hosts() {
     const [selectedHost, setSelectedHost] = useState(null);
-
     const hostsFromStore = useHostsStore((state) => state.hosts);
     const filters = useHostFiltersStore((state) => state.filters);
     const query = useQuery({
@@ -32,7 +31,7 @@ function Hosts() {
 
             return {
                 ...hostInfo,
-                name: apiHost.name,
+                name: hostInfo.name || apiHost.name,
                 city: apiHost.city,
                 avatar: apiHost.avatar,
             };
@@ -69,15 +68,21 @@ function Hosts() {
                     <p className="host-card__description">{host.description} </p>
                     <p className="host-card__dates"> Available from {host.availability.start} to {host.availability.end}</p>
 
-                    <button
-                        className="host-card__button"
-                        type="button"
-                        onClick={() => setSelectedHost(host)}
-                    >
-                        Contact the host
-                    </button>
+                    {selectedHost?.id === host.id ? (
+                        <div className="host-card__success">
+                            ✓ Request sent
+                        </div>
+                    ) : (
+                        <button
+                            className="host-card__button"
+                            type="button"
+                            onClick={() => setSelectedHost(host)}
+                        >
+                            Contact the host
+                        </button>
+                    )}
                 </div>
-            ))}
+            ))};
         </div>
     );
 }

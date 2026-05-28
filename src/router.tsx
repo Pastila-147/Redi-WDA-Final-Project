@@ -7,6 +7,7 @@ import FindSitter from './pages/FindSitter'
 import Reviews from './pages/Reviews'
 import Errorpage from './pages/Errorpage'
 import Layout from "./layout.tsx";
+import DogDetailsPage from './pages/DogDetailsPage.tsx'
 
 export const router = createBrowserRouter([
     {
@@ -27,6 +28,10 @@ export const router = createBrowserRouter([
             {
                 path: 'dog',
                 element: <FindDog />,
+            },
+            {
+                path: 'dog/:id',
+                element: <DogDetailsPage />,
             },
             {
                 path: 'host',
