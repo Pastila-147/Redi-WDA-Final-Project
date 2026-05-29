@@ -7,28 +7,13 @@ export default function Hero() {
         <section className="hero">
             <div className="hero__container">
 
-                <div className="hero__image">
-                    <img src={maindog} alt="Golden Retriever" />
-                </div>
-
+                <div className="hero__image"><img src={maindog} alt="Golden Retriever" /></div>
                 <div className="hero__content">
-                    <h1 className="hero__title">
-                        Find loving care<br/>for your dog in Munich
-                    </h1>
-
-                    <p className="hero__text">
-                        A community of people who look after dogs<br/>while you're on vacation
-                    </p>
-
+                    <h1 className="hero__title">Find loving care<br/>for your dog in Munich</h1>
+                    <p className="hero__text">A community of people who look after dogs<br/>while you&apos;re on vacation</p>
                     <div className="hero__actions">
-                        <NavLink to="/dog#add-dog-form" className="btn-hero">
-                            List your dog
-                        </NavLink>
-
-                        {/*other button design*/}
-                        <NavLink to="/host#add-host-form" className="btn-hero btn-hero__secondary">
-                            Become a host
-                        </NavLink>
+                        <NavLink to="/dog#add-dog-form" className="btn-hero">List your dog</NavLink>
+                        <NavLink to="/host#add-host-form" className="btn-hero">Become a host</NavLink>
                     </div>
                 </div>
 

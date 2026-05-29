@@ -9,13 +9,8 @@ import './FindDog.css';
 
 
 export default function FindDog() {
-
     const location = useLocation();
-    const {
-        isOpen,
-        openForm
-    } = useAddDogStore();
-
+    const {isOpen, openForm} = useAddDogStore();
 
     useEffect(() => {
         if (location.hash === '#add-dog-form') {

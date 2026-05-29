@@ -3,10 +3,26 @@ import HostSearchForm from '../components/Forms/HostSearchForm';
 import AddHostForm from '../components/Forms/AddHostForm';
 import { useAddHostStore } from '../stores/addHostStore';
 import './FindSitter.css';
+import {useEffect} from "react";
+import { useLocation } from 'react-router-dom';
 
-export default function About() {
+
+export default function FindSitter() {
+    const location = useLocation();
     const openForm = useAddHostStore((state) => state.openForm);
     const isOpen = useAddHostStore((state) => state.isOpen);
+
+    useEffect(() => {
+        if (location.hash === '#add-host-form') {
+            openForm();
+
+            setTimeout(() => {
+                document
+                    .getElementById('add-host-form')
+                    ?.scrollIntoView({ behavior: 'smooth' });
+            }, 100);
+        }
+    }, [location, openForm]);
 
     return (
         <section className="hosts-page" id="find-host">

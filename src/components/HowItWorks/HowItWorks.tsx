@@ -10,46 +10,34 @@ export default function HowItWorks() {
                     <li className="how-it-works__item">
                         <div className="how-it-works__number">1</div>
                         <h3 className="how-it-works__item-title">Create a profile for your dog</h3>
-                        <p className="how-it-works__item-text">
-                            Tell us about your dog and the dates you need care
-                        </p>
+                        <p className="how-it-works__item-text">Tell us about your dog and the dates you need care</p>
                     </li>
 
                     <li className="how-it-works__item">
                         <div className="how-it-works__number">2</div>
                         <h3 className="how-it-works__item-title">Find a suitable host</h3>
-                        <p className="how-it-works__item-text">
-                            Browse profiles or get contacted by hosts
-                        </p>
+                        <p className="how-it-works__item-text">Browse profiles or get contacted by hosts</p>
                     </li>
 
                     <li className="how-it-works__item">
                         <div className="how-it-works__number">3</div>
                         <h3 className="how-it-works__item-title">Meet in advance</h3>
-                        <p className="how-it-works__item-text">
-                            Arrange a meeting to make sure it’s a good match
-                        </p>
+                        <p className="how-it-works__item-text">Arrange a meeting to make sure it’s a good match</p>
                     </li>
 
                     <li className="how-it-works__item">
                         <div className="how-it-works__number">4</div>
                         <h3 className="how-it-works__item-title">Agree on the details</h3>
-                        <p className="how-it-works__item-text">
-                            Choose where your dog stays and plan everything together
-                        </p>
+                        <p className="how-it-works__item-text">Choose where your dog stays and plan everything together</p>
                     </li>
 
                 </ul>
 
-                <p className="how-it-works__final">
-                    Relax knowing your dog is in good hands
-                </p>
+                <p className="how-it-works__final">Relax knowing your dog is in good hands</p>
 
                 <div className="how-it-works__note">
                     <h3 className="how-it-works__note-title">Note:</h3>
-                    <p className="how-it-works__note-text">
-                        Hosting is free, but a small souvenir from your trip is always appreciated 😉
-                    </p>
+                    <p className="how-it-works__note-text">Hosting is free, but a small souvenir from your trip is always appreciated 😉</p>
                 </div>
             </div>
         </section>

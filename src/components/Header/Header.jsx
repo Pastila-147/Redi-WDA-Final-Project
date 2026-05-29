@@ -1,7 +1,7 @@
 import './Header.css';
 import logo from '../../assets/Logo_horizont.png';
 import { NavLink } from 'react-router-dom';
-import CallBackForm from "../Forms/callbackForm";
+import CallBackForm from "../Forms/callbackForm.jsx";
 import { useCallbackStore } from '../../stores/callbackStore';
 
 export default function Header() {

@@ -1,9 +1,17 @@
 import { RouterProvider } from 'react-router-dom'
 import { router } from './router'
-import { useEffect } from 'react';
 
 function App() {
-  useEffect(() => {localStorage.clear();}, []);
+
+
+  //clear data(!)
+
+  // useEffect(() => {
+  //   localStorage.removeItem('dogs');
+  //   localStorage.removeItem('hosts');
+  // }, []);
+
+
   return(
   <>
   <RouterProvider router={router} />

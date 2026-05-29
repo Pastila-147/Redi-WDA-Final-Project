@@ -53,36 +53,38 @@ function Hosts() {
 
 
     return (
-        <div className="host-list">
-            {filteredHosts.map((host) => (
-                <div key={host.id} className="host-card">
-                    <img
-                        className="host-card__avatar"
-                        src={host.avatar}
-                        alt={host.name}
-                    />
+        <div className="host-list-wrapper">
+            <div className="host-list">
+                {filteredHosts.map((host) => (
+                    <div key={host.id} className="host-card">
+                        <img
+                            className="host-card__avatar"
+                            src={host.avatar}
+                            alt={host.name}
+                        />
 
-                    <h3 className="host-card__name">{host.name}</h3>
-                    <p className="host-card__city">{host.city}</p>
-                    <p className="host-card__experience">{host.experience} {host.experience === 1 ? 'year' : 'years'} of experience</p>
-                    <p className="host-card__description">{host.description} </p>
-                    <p className="host-card__dates"> Available from {host.availability.start} to {host.availability.end}</p>
+                        <h3 className="host-card__name">{host.name}</h3>
+                        <p className="host-card__city">{host.city}</p>
+                        <p className="host-card__experience">{host.experience} {host.experience === 1 ? 'year' : 'years'} of experience</p>
+                        <p className="host-card__description">{host.description} </p>
+                        <p className="host-card__dates"> Available from {host.availability.start} to {host.availability.end}</p>
 
-                    {selectedHost?.id === host.id ? (
-                        <div className="host-card__success">
-                            ✓ Request sent
-                        </div>
-                    ) : (
-                        <button
-                            className="host-card__button"
-                            type="button"
-                            onClick={() => setSelectedHost(host)}
-                        >
-                            Contact the host
-                        </button>
-                    )}
-                </div>
-            ))};
+                        {selectedHost?.id === host.id ? (
+                            <div className="host-card__success">
+                                ✓ Request sent
+                            </div>
+                        ) : (
+                            <button
+                                className="host-card__button"
+                                type="button"
+                                onClick={() => setSelectedHost(host)}
+                            >
+                                Contact the host
+                            </button>
+                        )}
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }

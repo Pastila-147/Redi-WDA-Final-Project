@@ -52,7 +52,7 @@ function DogDetails({ dog,onChoose }) {
                             />
                         </div>
 
-                        <div className="dog-detailsl__info">
+                        <div className="dog-details__info">
                             <p className="dog-details__breed">
                                 {dog.breed}
                             </p>

@@ -1,7 +1,7 @@
 import React from "react";
 import { useAddDogStore } from "../../stores/addDogStore";
 import "./AddDogForm.css";
-import { useDogsStore } from "../../stores/dogsStore.tsx";
+import { useDogsStore } from "../../stores/dogsStore";
 
 function AddDogForm() {
     const {
@@ -17,7 +17,6 @@ function AddDogForm() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-
         const newDog = {
             id: Date.now(),
             ...form,
@@ -29,7 +28,6 @@ function AddDogForm() {
         };
 
         addDog(newDog);
-
         resetForm();
         closeForm();
     };
@@ -37,9 +35,7 @@ function AddDogForm() {
     return (
         <form className="new-dog-form" onSubmit={handleSubmit}>
 
-            <button className="new-dog-form__close" type="button"
-                    onClick={closeForm}>×
-            </button>
+            <button className="new-dog-form__close" type="button" onClick={closeForm}>×</button>
 
             <input
                 name="name"
@@ -70,7 +66,6 @@ function AddDogForm() {
                 onChange={(e) => setField("description",e.target.value)}
                 required
             />
-
             <input
                 name="start"
                 type="date"
@@ -85,17 +80,16 @@ function AddDogForm() {
                 onChange={(e) => setNestedField("availability","end",e.target.value)}
                 required
             />
-
             <select
                 name="energyLevel"
                 value={form.personality.energyLevel}
                 onChange={(e) =>
-                    setNestedField("personality", "energyLevel", e.target.value)
-                }
+                    setNestedField("personality", "energyLevel", e.target.value)}
                 required
             >
                 <option value="">Energy level</option>
                 <option value="low">Low</option>
+                <option value="medium">Medium</option>
                 <option value="high">High</option>
             </select>
 
@@ -107,25 +101,21 @@ function AddDogForm() {
                 onChange={(e) => setNestedField("care", "walksPerDay", e.target.value)}
                 required
             />
-
             <label>
                 <input
                     type="checkbox"
                     checked={form.personality.goodWithDogs}
                     onChange={(e) =>
-                        setNestedField("personality", "goodWithDogs", e.target.checked)
-                    }
+                        setNestedField("personality", "goodWithDogs", e.target.checked)}
                 />
                 Good with dogs
             </label>
-
             <label>
                 <input
                     type="checkbox"
                     checked={form.personality.goodWithKids}
                     onChange={(e) =>
-                        setNestedField("personality", "goodWithKids", e.target.checked)
-                    }
+                        setNestedField("personality", "goodWithKids", e.target.checked)}
                 />
                 Good with kids
             </label>
@@ -135,14 +125,10 @@ function AddDogForm() {
                     type="checkbox"
                     checked={form.personality.canStayAlone}
                     onChange={(e) =>
-                        setNestedField("personality", "canStayAlone", e.target.checked)
-                    }
+                        setNestedField("personality", "canStayAlone", e.target.checked)}
                 />
                 Can stay alone
             </label>
-
-
-
             <label>
             <input
                 type="checkbox"
@@ -154,9 +140,6 @@ function AddDogForm() {
             </label>
 
             <button type="submit"> Send </button>
-
-            {/*<button type="button" onClick={closeForm}>x</button>*/}
-
         </form>
     );
 }

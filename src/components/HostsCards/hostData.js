@@ -28,7 +28,7 @@ export const hostsData = [
 
         availability: {
             start: "2026-05-30",
-            end: "2026-05-07"
+            end: "2026-06-07"
         },
     },
 

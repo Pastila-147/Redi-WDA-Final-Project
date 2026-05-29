@@ -1,13 +1,13 @@
 import { createBrowserRouter} from "react-router-dom";
 
-import Home from './pages/Home.tsx'
+import Home from './pages/Home'
 import About from './pages/About'
-import FindDog from './pages/FindDog.tsx'
+import FindDog from './pages/FindDog'
 import FindSitter from './pages/FindSitter'
 import Reviews from './pages/Reviews'
 import Errorpage from './pages/Errorpage'
-import Layout from "./layout.tsx";
-import DogDetailsPage from './pages/DogDetailsPage.tsx'
+import Layout from "./layout";
+import DogDetailsPage from './pages/DogDetailsPage'
 
 export const router = createBrowserRouter([
     {

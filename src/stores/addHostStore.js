@@ -1,6 +1,9 @@
 import { create } from "zustand";
 
 const initialHostForm = {
+    name: "",
+    age: "",
+    experience: "",
     description: "",
     availability: {
         start: "",
