@@ -8,7 +8,7 @@ export async function getHosts() {
 
     const data = await response.json();
 
-    return data.results.map(host => ({
+    return data.results.map((host: any) => ({
         id: host.login.uuid,
         name: `${host.name.first} ${host.name.last}`,
         city: 'Munich',

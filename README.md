@@ -1,85 +1,151 @@
-<<<<<<< HEAD
-# React + TypeScript + Vite
+# DogBnB
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+DogBnB is a React web application that helps dog owners find temporary hosts for their pets and allows dog lovers to offer hosting services.
 
-Currently, two official plugins are available:
+The project was developed as part of the **ReDI School of Digital Integration – Web Development Advanced** program.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Live Demo
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-=======
-# Redi-WDA-Final-Project
-
-DogBnB is a web application for finding dog boarding services or becoming a host.
+https://pastila-147.github.io/Redi-WDA-Final-Project/#/
 
 ## Features
-- Find a sitter
-- Become a host
-- Reviews
-- About page
->>>>>>> origin/main
+
+* Browse dogs looking for temporary care
+* Browse available hosts in Munich
+* Filter dogs by personality, care needs, and availability
+* Filter hosts by availability dates
+* View detailed dog profiles
+* Add new dogs and hosts through forms
+* Leave reviews
+* Request a callback through a validated contact form
+* Save user-created dogs and hosts in LocalStorage
+
+## Technologies
+
+* React
+* React Router
+* React Query
+* Zustand
+* React Hook Form
+* Vite
+* JavaScript
+* HTML5
+* CSS3
+
+## API Integration
+
+The application combines local business data with public APIs:
+
+### Dog CEO API
+
+Used to load random dog images for dog profiles.
+
+### Random User API
+
+Used to generate realistic host avatars and profile information.
+
+## State Management
+
+### Zustand
+
+Used for:
+
+* Dog and host data
+* Search filters
+* Form state management
+* Callback modal state
+* Global application state
+
+### React Query
+
+Used for:
+
+* Data fetching
+* API caching
+* Loading states
+* Error handling
+
+## Pages
+
+### Home
+
+Landing page with Hero section, How It Works, and Reviews.
+
+### About
+
+Project information and technology overview.
+
+### Find a Dog
+
+Browse dogs, apply filters, add new dog profiles, and view detailed information.
+
+### Find a Host
+
+Browse available hosts, filter by dates, and add new host profiles.
+
+### Reviews
+
+Submit user reviews through a simple form.
+
+## Project Structure
+
+```text
+src/
+├── api/
+├── assets/
+├── components/
+│   ├── DogsCards/
+│   ├── HostsCards/
+│   ├── Forms/
+│   ├── Header/
+│   ├── Footer/
+│   ├── Hero/
+│   ├── HowItWorks/
+│   └── Reviews/
+├── pages/
+├── stores/
+├── App.tsx
+├── router.jsx
+└── main.tsx
+```
+
+## Getting Started
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+Build the project:
+
+```bash
+npm run build
+```
+
+## Learning Goals
+
+This project demonstrates:
+
+* Component-based architecture
+* Routing with React Router
+* State management with Zustand
+* API integration with React Query
+* Form handling and validation with React Hook Form
+* Local data persistence with LocalStorage
+* Responsive UI development
+
+## Author
+
+**Evgeniya Emelina**
+
+https://www.linkedin.com/in/evgeniya-emelina-8956aa28a/
+Web Development Advanced Program
+ReDI School of Digital Integration
+
