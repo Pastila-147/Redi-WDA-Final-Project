@@ -1,4 +1,4 @@
-import { createBrowserRouter} from "react-router-dom";
+import { createHashRouter} from "react-router-dom";
 
 import Home from './pages/Home'
 import About from './pages/About'
@@ -9,7 +9,7 @@ import Errorpage from './pages/Errorpage'
 import Layout from "./layout";
 import DogDetailsPage from './pages/DogDetailsPage'
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
     {
         path: '/',
         // Layout = Header + Outlet (Outlet is a place for children) + Footer
