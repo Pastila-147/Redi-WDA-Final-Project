@@ -30,7 +30,7 @@ https://pastila-147.github.io/Redi-WDA-Final-Project/#/
 * Vite
 * JavaScript
 * HTML5
-* CSS3
+* CSS
 
 ## API Integration
 

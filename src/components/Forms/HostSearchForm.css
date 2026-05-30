@@ -2,11 +2,9 @@
     max-width: 1240px;
     margin: 0 auto 40px;
     padding: 22px 40px 24px;
-
     display: flex;
     align-items: center;
     gap: 20px;
-
     border-radius: 20px;
     background-color: lavender;
 }
@@ -14,9 +12,8 @@
 .host-filters label {
     display: flex;
     flex-direction: row;
-    /*align-items: center;*/
-    gap: 8px;
-
+    align-items: center;
+    gap: 12px;
     font-size: 20px;
     font-weight: 600;
     color: #7e73c9;
@@ -32,11 +29,9 @@
     border: 1px solid #d8d3df;
     border-radius: 10px;
     background-color: white;
-
     font-size: 20px;
     font-family: inherit;
     color: #1f1f1f;
-
     outline: none;
     transition: border-color 0.2s ease;
 }
@@ -48,19 +43,16 @@
 .host-filters button {
     height: 56px;
     padding: 0 32px;
-
     border: 1px solid #aaa4bf;
     border-radius: 14px;
     background-color: transparent;
-
     font-size: 20px;
     font-weight: 600;
     color: #1f1f1f;
-
     cursor: pointer;
     transition: 0.2s ease;
 }
 
 .host-filters button:hover {
-    background-color: #ffffff;
+    background-color: white;
 }

@@ -16,17 +16,14 @@ function HostSearchForm() {
                            setFilter('startDate', event.target.value)}/>
             </label>
 
-            <label>
-                End date:
+            <label> End date:
                 <input type="date"
                        value={filters.endDate}
                        onChange={(event) =>
                            setFilter('endDate', event.target.value)}/>
             </label>
 
-            <button type="button" onClick={resetFilters}>
-                Reset filters
-            </button>
+            <button type="button" onClick={resetFilters}>Reset filters</button>
         </div>
     );
 }

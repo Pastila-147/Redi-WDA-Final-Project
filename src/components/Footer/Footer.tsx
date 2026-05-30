@@ -77,7 +77,7 @@ export default function Footer() {
                             <img className="footer__download__icon" src={download} alt="download"/>
                             <a className="footer__download__link"
                                href="https://t.me/addstickers/Dunchick_by_fStikBot">
-                                 Download Sticker Pack
+                                 Download a Sticker Pack
                             </a>
                         </div>
                     </div>
